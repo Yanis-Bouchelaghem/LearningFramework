@@ -27,6 +27,7 @@ Window::Window(int windowWidth, int windowHeight, int targetFPS, std::string win
 	assert(!GetWindowHandle());//If assertion triggers : Window is already opened.
 	SetTargetFPS(targetFPS);
 	InitWindow(windowWidth, windowHeight, windowTitle.c_str());
+	std::cout << "Learning Framework V1.0\n";
 	std::cout << "-------------------------------------------\n";
 }
 
