@@ -30,7 +30,7 @@ Window::Window(int windowWidth, int windowHeight, int targetFPS, std::string win
 	std::cout << "-------------------------------------------\n";
 }
 
-Window::~Window()
+Window::~Window() noexcept
 {
 	assert(GetWindowHandle());//If assertion triggers : Window is already closed.
 	std::cout << "\n-------------------------------------------\n";
@@ -85,22 +85,22 @@ bool Window::IsKeyUp(KeyboardKeys key) const
 	return ::IsKeyUp((unsigned char)key);
 }
 
-bool Window::IsMouseButtonPressed(MouseButtons button)
+bool Window::IsMouseButtonPressed(MouseButtons button) const
 {
 	return ::IsMouseButtonPressed((int)button);
 }
 
-bool Window::IsMouseButtonDown(MouseButtons button)
+bool Window::IsMouseButtonDown(MouseButtons button) const
 {
 	return ::IsMouseButtonDown((int)button);
 }
 
-bool Window::IsMouseButtonReleased(MouseButtons button)
+bool Window::IsMouseButtonReleased(MouseButtons button) const
 {
 	return ::IsMouseButtonReleased((int)button);
 }
 
-bool Window::IsMouseButtonUp(MouseButtons button)
+bool Window::IsMouseButtonUp(MouseButtons button) const
 {
 	return ::IsMouseButtonUp((int)button);
 }

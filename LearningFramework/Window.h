@@ -28,7 +28,7 @@ public:
 	Window(int windowWidth, int windowHeight, int targetFPS, std::string windowTitle);
 	Window(const Window& other) = delete;
 	Window& operator=(const Window& other) = delete;
-	~Window();
+	~Window() noexcept;
 public:
 	void StartDrawing();	//Prepares the canvas for drawing, should be called before drawing.
 	void FinishDrawing();	//Ends the drawing and displays it.
@@ -43,10 +43,10 @@ public:
 	bool IsKeyReleased(KeyboardKeys key) const;	// Check if a key has been released once
 	bool IsKeyUp(KeyboardKeys key) const;		// Check if a key is NOT being pressed
 	//TODO : Mouse input
-	bool IsMouseButtonPressed(MouseButtons button);	// Check if a mouse button has been pressed once
-	bool IsMouseButtonDown(MouseButtons button);		// Check if a mouse button is being pressed
-	bool IsMouseButtonReleased(MouseButtons button);	// Check if a mouse button has been released once
-	bool IsMouseButtonUp(MouseButtons button);		// Check if a mouse button is NOT being pressed
+	bool IsMouseButtonPressed(MouseButtons button) const;	// Check if a mouse button has been pressed once
+	bool IsMouseButtonDown(MouseButtons button) const;		// Check if a mouse button is being pressed
+	bool IsMouseButtonReleased(MouseButtons button) const;	// Check if a mouse button has been released once
+	bool IsMouseButtonUp(MouseButtons button) const;		// Check if a mouse button is NOT being pressed
 	int GetMouseX() const;	// Get mouse position X
 	int GetMouseY() const;	// Get mouse position Y
 };
