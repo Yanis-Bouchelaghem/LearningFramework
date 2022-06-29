@@ -68,22 +68,22 @@ void Window::DrawPixel(int x, int y, unsigned char r, unsigned char g, unsigned 
 
 bool Window::IsKeyPressed(KeyboardKeys key) const
 {
-	return ::IsKeyPressed((unsigned char)key);
+	return ::IsKeyPressed((int)key);
 }
 
 bool Window::IsKeyDown(KeyboardKeys key) const
 {
-	return ::IsKeyDown((unsigned char)key);
+	return ::IsKeyDown((int)key);
 }
 
 bool Window::IsKeyReleased(KeyboardKeys key) const
 {
-	return ::IsKeyReleased((unsigned char)key);
+	return ::IsKeyReleased((int)key);
 }
 
 bool Window::IsKeyUp(KeyboardKeys key) const
 {
-	return ::IsKeyUp((unsigned char)key);
+	return ::IsKeyUp((int)key);
 }
 
 bool Window::IsMouseButtonPressed(MouseButtons button) const

@@ -28,6 +28,8 @@ public:
 private:
 	void Update();
 	void Draw();
+	//Your functions go here
 private:
 	Window window;
+	//Your variables go here
 };
