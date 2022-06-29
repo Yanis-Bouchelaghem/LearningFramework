@@ -22,6 +22,7 @@
 #include "KeyboardKeys.h"
 #include "MouseButtons.h"
 
+//A light wrapper around raylib for accessing its features in an object-oriented way.
 class Window
 {
 public:
@@ -42,7 +43,7 @@ public:
 	bool IsKeyDown(KeyboardKeys key) const;		// Check if a key is being pressed
 	bool IsKeyReleased(KeyboardKeys key) const;	// Check if a key has been released once
 	bool IsKeyUp(KeyboardKeys key) const;		// Check if a key is NOT being pressed
-	//TODO : Mouse input
+	//Mouse input
 	bool IsMouseButtonPressed(MouseButtons button) const;	// Check if a mouse button has been pressed once
 	bool IsMouseButtonDown(MouseButtons button) const;		// Check if a mouse button is being pressed
 	bool IsMouseButtonReleased(MouseButtons button) const;	// Check if a mouse button has been released once
